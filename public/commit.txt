@@ -1,0 +1,111 @@
+nessa aula a gente vai criar uma API para simular um banco de dados. Ela vai ser responsavel por armazenar as categorias e mostrar as mesmas no nosso "Senecione a categoria" la em "Novo projeto". Para que a gente tenha uso dela é preciso abrir um novo terminal aqui no vscode mesmo apertando no " + " no canto direito do terminal. 
+
+A nossa API/Bancodedados vai ser criada com "db.json" que esta dentro do diretorio "src" dentro dela vamos ter categorias.
+
+Para que essa API tenha utilidade é preciso fazer uma implementação no arquivo "package.json" dentro dele na sessão  "Debug" vamos atribuir o conteudo:
+
+"backend": "json-server --watch db.json --port 5000",
+
+nesse caso enquanto a gente estiver rodando nosso programa os dados serão visiveis afim de teste no nosso sistema. Lembrando que é preciso rodar a API no terminal com o comando:
+
+$ npm run backend
+
+eu posso visualisar o conteudo da minha API no navegador atravez do endereço
+
+----     localhost:5000/categories     ----
+
+para ter acesso a isso foi preciso então fazer a logica para que eu consiga acessar as categorias na API
+""" ProjectForm.js
+const [categories, setCategories] = useState([])
+
+    useEffect(() =>{
+        fetch('http://localhost:5000/categories', {
+            method: 'GET',
+            headers:{
+                'Content-Type': 'application/json',
+            },
+        })
+        .then((resp)=>resp.json())
+        .then((data) => {
+            setCategories(data)
+        })
+        .catch((err) => console.log(err))
+    }, [])
+
+"""
+
+Para assim captar ela e mandar para o select ao qual vai imprimir essas categorias
+
+"""ProjectForm.js
+<Select 
+            name = "category_id" 
+            text = "Selecione a categoria"
+            options = {categories}
+            />
+"""
+
+No select recebemos a informação e assim imprimimos
+
+"""Select.js
+function Select({text, name, options, handleOnChange, value}){
+    return(
+        <div className={styles.form_control}>
+            <label htmlFor={name}>{text}:</label>
+            <select name={name} id={name}>
+                <option>Selecione uma opção</option>
+                {options.map((option) => (
+                    <option value={option.id} key={option.id}>{option.name}</option>
+                    ))
+                }
+            </select>
+        </div>
+    )
+}
+"""
+
+Essa foi a primeira faze Emplementamos então categories na nossa API/bancodedados e agora vamos trabalhar com a inclusão de projetos na nossa API/bancodedados.
+
+Para isso temos que atribuir 
+
+import styles from './NewProject.module.css'
+
+import { useNavigate } from 'react-router-dom'
+
+import ProjectForm from '../project/ProjectForm'
+
+function NewProject(){
+    const navigate = useNavigate()
+
+    function createPost(project){
+        //initialize cost and services
+        project.cost = 0
+        project.services = []
+
+        fetch("http://localhost:5000/projects",{
+            method: 'POST',
+            headers: {
+                'Content-type': 'application/json',
+            },
+            body: JSON.stringify(project),
+        })
+            .then((resp) => resp.json())
+            .then((data) => {
+                console.log(data)
+                //redirect
+                navigate('/projects', { state: { message: 'Projeto criado com sucesso!!' } })
+
+            })
+            .catch((err) => console.log(err))
+    }
+    return(
+        <div className={styles.newproject_container}>
+            <h1>Novo Projeto</h1>
+            <p>Crie seu projeto para depois adicionar os serviços</p>
+            <ProjectForm handleSubmit={createPost} btnText="Criar Projeto" />
+        </div>
+        )
+}
+
+export default NewProject
+
+# fizemos algumas inclusões no ProjectFoms.js . Mas acho que da de ver a diferença nos commites 
