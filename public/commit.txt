@@ -1,0 +1,17 @@
+nessa aula a gente vai criar uma API para simular um banco de dados. Ela vai ser responsavel por armazenar as categorias e mostrar as mesmas no nosso "Senecione a categoria" la em "Novo projeto". Para que a gente tenha uso dela é preciso abrir um novo terminal aqui no vscode mesmo apertando no " + " no canto direito do terminal. 
+
+A nossa API/Bancodedados vai ser criada com "db.json" que esta dentro do diretorio "src" dentro dela vamos ter categorias.
+
+Para que essa API tenha utilidade é preciso fazer uma implementação no arquivo "package.json" dentro dele na sessão  "Debug" vamos atribuir o conteudo:
+
+"backend": "json-server --watch db.json --port 5000",
+
+nesse caso enquanto a gente estiver rodando nosso programa os dados serão visiveis afim de teste no nosso sistema. Lembrando que é preciso rodar a API no terminal com o comando:
+
+$ npm run backend
+
+eu posso visualisar o conteudo da minha API no navegador atravez do endereço
+
+----     localhost:5000/categories     ----
+
+Essa foi a primeira faze Emplementamos então categories na nossa API/bancodedados e agora vamos trabalhar com a inclusão de projetos na nssa API/bancodedados.
