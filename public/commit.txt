@@ -14,4 +14,55 @@ eu posso visualisar o conteudo da minha API no navegador atravez do endereço
 
 ----     localhost:5000/categories     ----
 
-Essa foi a primeira faze Emplementamos então categories na nossa API/bancodedados e agora vamos trabalhar com a inclusão de projetos na nssa API/bancodedados.
+para ter acesso a isso foi preciso então fazer a logica para que eu consiga acessar as categorias na API
+""" ProjectForm.js
+const [categories, setCategories] = useState([])
+
+    useEffect(() =>{
+        fetch('http://localhost:5000/categories', {
+            method: 'GET',
+            headers:{
+                'Content-Type': 'application/json',
+            },
+        })
+        .then((resp)=>resp.json())
+        .then((data) => {
+            setCategories(data)
+        })
+        .catch((err) => console.log(err))
+    }, [])
+
+"""
+
+Para assim captar ela e mandar para o select ao qual vai imprimir essas categorias
+
+"""ProjectForm.js
+<Select 
+            name = "category_id" 
+            text = "Selecione a categoria"
+            options = {categories}
+            />
+"""
+
+No select recebemos a informação e assim imprimimos
+
+"""Select.js
+function Select({text, name, options, handleOnChange, value}){
+    return(
+        <div className={styles.form_control}>
+            <label htmlFor={name}>{text}:</label>
+            <select name={name} id={name}>
+                <option>Selecione uma opção</option>
+                {options.map((option) => (
+                    <option value={option.id} key={option.id}>{option.name}</option>
+                    ))
+                }
+            </select>
+        </div>
+    )
+}
+"""
+
+Essa foi a primeira faze Emplementamos então categories na nossa API/bancodedados e agora vamos trabalhar com a inclusão de projetos na nossa API/bancodedados.
+
+
