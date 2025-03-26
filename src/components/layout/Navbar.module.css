@@ -1,0 +1,47 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    background-color: #222;
+    padding: 1em 2em;
+}
+
+.list{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 1em;
+    flex-wrap: wrap;
+    
+}
+
+.tem{
+    margin-right: 1em;
+}
+
+.item a {
+    color: #FFF;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out, transform 0.2s;
+}
+
+.item a:hover {
+    color: #FFBB33;
+    transform: scale(1.05);
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 760px){
+    .navbar{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 1em;
+    }
+
+    .list{
+        flex-direction: column;
+        gap: 1em;
+    }
+}

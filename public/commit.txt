@@ -1,0 +1,13 @@
+
+
+Fluxo do projeto:
+
+primeiro:
+criar a pagina que queremos que apreça por exemplo Home.js
+
+segundo:
+Em App.js apontar qual o caminho dessa class para que seja chamada na nossa page dentro de App.js temos que importar a classe <import Home from './components/pages/Home'> e depois na função principal chamar essa classe como esta bem visivel nesse processo
+
+terceiro:
+ver no nav bar se o link esta corrrespondente para que ao clicar no nave var seja direcionado para a pagina desejada
+
