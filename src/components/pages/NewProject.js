@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import styles from './NewProject.module.css'
 
 import { useNavigate } from 'react-router-dom'
@@ -36,6 +37,12 @@ function NewProject(){
             <ProjectForm handleSubmit={createPost} btnText="Criar Projeto" />
         </div>
         )
+=======
+function NewProject(){
+    return(
+        <h1>Novo Projeto</h1>
+    )
+>>>>>>> 5b0b23229d48d91cba78b1575f3173a167be50e8
 }
 
 export default NewProject
