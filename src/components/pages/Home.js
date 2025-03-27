@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import styles from './Home.module.css'
 import savings from '../../img/savings.svg'
 import LinkButton from '../layout/LinkButton'
@@ -21,3 +22,12 @@ export default Home
 
 
 
+=======
+function Home(){
+    return(
+        <h1>Home</h1>
+    )
+}
+
+export default Home
+>>>>>>> 5b0b23229d48d91cba78b1575f3173a167be50e8
