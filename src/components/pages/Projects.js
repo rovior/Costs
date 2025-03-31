@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import styles from './Projects.module.css'
 
 import Message from '../layout/Message'
@@ -87,11 +87,4 @@ function Projects() {
     );
 }
 
-export default Projects;
-=======
-function Projects(){
-    return <h1> Projects </h1>
-}
-
 export default Projects
->>>>>>> 5b0b23229d48d91cba78b1575f3173a167be50e8

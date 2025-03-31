@@ -1,0 +1,16 @@
+# Ignorar arquivos de log
+*.log
+
+# Ignorar diretório de dependências do Node.js
+node_modules/
+
+# Ignorar arquivos de build (output)
+dist/
+
+# Ignorar arquivos de configuração do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Ignorar arquivos de configuração específicos do ambiente de desenvolvimento
+.env
+

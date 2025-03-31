@@ -8,7 +8,7 @@
         "id": "1",
         "name": "infra"
       },
-      "cost": 5,
+      "cost": 8,
       "services": [
         {
           "name": "SiteLease",
@@ -22,6 +22,17 @@
       "id": "cdf9",
       "name": "SiteLease",
       "budget": "2323",
+      "category": {
+        "id": "1",
+        "name": "infra"
+      },
+      "cost": 0,
+      "services": []
+    },
+    {
+      "id": "ed88",
+      "name": "SiteLease",
+      "budget": "43",
       "category": {
         "id": "1",
         "name": "infra"

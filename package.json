@@ -13,15 +13,13 @@
     "uuid": "^11.0.5"
   },
   "scripts": {
-    "start": "react-scripts start",
-<<<<<<< HEAD
-    "backend": "json-server --watch db.json --port 5000",
-=======
->>>>>>> 5b0b23229d48d91cba78b1575f3173a167be50e8
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
+  "start": "HOST=0.0.0.0 react-scripts start",
+  "backend": "json-server --watch db.json --port 5000",
+  "build": "react-scripts build",
+  "test": "react-scripts test",
+  "eject": "react-scripts eject"
+}
+,
   "eslintConfig": {
     "extends": [
       "react-app",
