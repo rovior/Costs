@@ -11,6 +11,8 @@ import Services from './components/pages/Services';
 import Container from './components/layout/Container';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
+import Login from './components/login/Login';
+import PrivateRoute from './components/login/PrivateRoute';
 
 function App() { 
   return (
@@ -18,7 +20,8 @@ function App() {
       <Navbar />
       <Container customClass="min-height">
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<PrivateRoute><Home /></PrivateRoute>} />
+          <Route path="/login" element={<Login/>}/>
           <Route path="/company" element={<Company />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/projects"  element={<Projects />} />
