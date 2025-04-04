@@ -5,32 +5,6 @@ import styles from './Navbar.module.css'
 
 import logo from '../../img/costs_logo.png'
 
-<<<<<<< HEAD
-function Navbar(){
-    return(
-      <nav className={styles.navbar}>
-        <Container>
-          <Link to="/">
-            <img src={logo} alt="Costs"/>
-          </Link>
-          <ul className={styles.list}>
-            <li className={styles.item}>
-              <Link to="/">Home</Link>
-            </li>
-            <li className={styles.item}>
-              <Link to="/contact">Contato</Link>
-            </li>
-            <li className={styles.item}>
-              <Link to="/company">Empresa</Link>
-            </li>
-            <li className={styles.item}>
-              <Link to="/newproject">Novo Projeto</Link>
-            </li>
-          </ul>
-        </Container>
-      </nav>
-    )
-=======
 function Navbar() {
   return (
     <nav className={styles.navbar}>
@@ -61,8 +35,6 @@ function Navbar() {
       </Container>
     </nav>
   )
->>>>>>> refs/remotes/origin/main
 }
 
 export default Navbar
- 
