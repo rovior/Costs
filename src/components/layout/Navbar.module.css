@@ -1,21 +1,18 @@
-.navbar{
+.navbar {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: #222;
     padding: 1em 2em;
+    position: relative;
 }
 
-.list{
+.list {
     display: flex;
     list-style: none;
     align-items: center;
     gap: 1em;
     flex-wrap: wrap;
-    
-}
-
-.tem{
-    margin-right: 1em;
 }
 
 .item a {
@@ -30,18 +27,38 @@
     transform: scale(1.05);
 }
 
-/* RESPONSIVIDADE */
+/* Ícone do menu hamburguer */
+.menu-toggle {
+    display: none; /* Escondido por padrão */
+    font-size: 2em;
+    color: #FFF;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
 
-@media (max-width: 760px){
-    .navbar{
+/* Responsividade para telas menores */
+@media (max-width: 760px) {
+    .navbar {
         flex-direction: column;
         align-items: center;
         text-align: center;
         padding: 1em;
     }
 
-    .list{
+    .menu-toggle {
+        display: block; /* Exibe o menu hamburguer */
+    }
+
+    .list {
+        display: none; /* Esconde o menu por padrão */
         flex-direction: column;
-        gap: 1em;
+        width: 100%;
+        text-align: center;
+        padding-top: 1em;
+    }
+
+    .list.active {
+        display: flex; /* Exibe quando ativo */
     }
 }
