@@ -5,7 +5,16 @@ function Select({text, name, options, handleOnChange, value}){
         <div className={styles.form_control}>
             <label htmlFor={name}>{text}:</label>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <select name={name} id={name}>
+=======
+            <select 
+                name={name} 
+                id={name} 
+                onChange={handleOnChange}
+                value={value || ''}
+            >
+>>>>>>> 4e73da944 (Inclusão de informações no banco de dados #24)
                 <option>Selecione uma opção</option>
 <<<<<<< HEAD
 =======
