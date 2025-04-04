@@ -1,6 +1,4 @@
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
   "projects": [
     {
       "id": "63c9",
@@ -38,8 +36,10 @@
       "category": {
         "id": "1",
         "name": "infra"
-=======
-  "projects": [
+      },
+      "cost": 0,
+      "services": []
+    },
     {
       "id": "13db",
       "name": "SItelease",
@@ -47,7 +47,6 @@
       "category": {
         "id": "3",
         "name": "Desing"
->>>>>>> 4e73da944 (Inclusão de informações no banco de dados #24)
       },
       "cost": 0,
       "services": []
@@ -71,28 +70,4 @@
       "name": "Planejamento"
     }
   ]
-<<<<<<< HEAD
-=======
-    "projects": [],
-    "categories": [
-        {
-            "id": 1,
-            "name": "infra"
-        },
-        {
-            "id": 2,
-            "name": "Desenvolvimento"
-        },
-        {
-            "id": 3,
-            "name": "Desing"
-        },
-        {
-            "id": 4,
-            "name": "Planejamento"
-        }
-    ]
->>>>>>> 0bdbce84c (Conectando com API pelo React #23)
-=======
->>>>>>> 4e73da944 (Inclusão de informações no banco de dados #24)
 }

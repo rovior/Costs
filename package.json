@@ -13,22 +13,12 @@
     "uuid": "^11.0.5"
   },
   "scripts": {
-<<<<<<< HEAD
-  "start": "HOST=0.0.0.0 react-scripts start",
-  "backend": "json-server --watch db.json --port 5000",
-  "build": "react-scripts build",
-  "test": "react-scripts test",
-  "eject": "react-scripts eject"
-}
-,
-=======
-    "start": "react-scripts start",
+    "start": "HOST=0.0.0.0 react-scripts start",
     "backend": "json-server --watch db.json --port 5000",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
->>>>>>> 0bdbce84c (Conectando com API pelo React #23)
   "eslintConfig": {
     "extends": [
       "react-app",
